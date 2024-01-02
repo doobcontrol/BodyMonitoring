@@ -140,7 +140,6 @@ namespace com.xiyuansoft.BodyMonitoring.winform
 
         }
 
-
         int Read(string equid)
         {
             byte[] sendData = new byte[11]; //C2C605A4D763
@@ -156,24 +155,16 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             sendData[9] = 0x0d;
             sendData[10] = 0x0a;
 
-            com.Write(sendData, 0, sendData.Length);
-
-            com.DiscardInBuffer();
+            //新设备自动发结果来，不需请求？？ sendData保留用作收到数据的验证
+            //com.DiscardInBuffer();
+            //com.Write(sendData, 0, sendData.Length);
 
             byte[] ReceivedData = new byte[16];
             int retInt = 0;
-            int rInt = 0;
             try
             {
-                while (rInt < 16)
-                {
-                    //if (com.BytesToRead > 1)
-                    //{
-                        retInt = com.Read(ReceivedData, rInt, 16 - rInt);
-                        rInt += retInt;
-                    //}
-
-                }
+                        retInt = com.Read(ReceivedData, 0, 16);
+                        com.DiscardInBuffer();
             }
             catch (Exception e)
             {
@@ -210,15 +201,15 @@ namespace com.xiyuansoft.BodyMonitoring.winform
         private void Decoder(byte[] ReceivedData, string equid)
         {
             Dictionary<string, int> bmDataDic = new Dictionary<string, int>();
-            if (ReceivedData[10] * 256 + ReceivedData[11] != 0 && ReceivedData[9] != 0)
-            {
+            //if (ReceivedData[10] * 256 + ReceivedData[11] != 0 && ReceivedData[9] != 0)
+            //{
                 bmDataDic.Add("HeartRate", ReceivedData[10] * 256 + ReceivedData[11]);
                 bmDataDic.Add("Breathe", ReceivedData[9]);
-            }
-            else
-            {
-                bmDataDic = null; //过滤0值
-            }
+            //}
+            //else
+            //{
+            //    bmDataDic = null; //过滤0值
+            //}
             sendMessage(
                 "收到协议：呼吸： " + ReceivedData[9] + "   心率：" + (ReceivedData[10] * 256 + ReceivedData[11])
                 , bmDataDic

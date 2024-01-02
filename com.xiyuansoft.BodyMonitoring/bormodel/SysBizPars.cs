@@ -20,7 +20,7 @@ namespace com.xiyuansoft.BodyMonitoring.bormodel
                 bpmodel.addInitItem(batabaseV, "1.0");         //数据库结构升级时更改些值
 
                 bpmodel.addInitItem(comPort, "");
-                bpmodel.addInitItem(comBaud, "115200");
+                bpmodel.addInitItem(comBaud, "38400");  //新设备值为38400 若不行，下载官方程序看串口配置
                 bpmodel.addInitItem(comData, "8");
                 bpmodel.addInitItem(comStop, StopBitsMapString[System.IO.Ports.StopBits.One]);
                 bpmodel.addInitItem(comParity, ParityMapString[System.IO.Ports.Parity.None]);

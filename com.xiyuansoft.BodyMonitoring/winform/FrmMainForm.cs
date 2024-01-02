@@ -111,7 +111,7 @@ namespace com.xiyuansoft.BodyMonitoring.winform
                 equDic.Add(dr[Equ.fEquID].ToString(), newEquDic);
                 newEquDic.Add("datarow", dr);
                 newEquDic.Add("lastActtime", DateTime.Now);
-                newEquDic.Add("work", false);
+                newEquDic.Add("work", true);
             }
             ResumeLayout();
         }
@@ -212,6 +212,7 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             CheckBox chkWork = new CheckBox();
             chkWork.Location = new Point(stX + 120, stY);
             chkWork.ForeColor = breathBeatColor;
+            chkWork.Checked = true;
             chkWork.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             chkWork.Text = "监测";
             chkWork.Tag = retDic; 

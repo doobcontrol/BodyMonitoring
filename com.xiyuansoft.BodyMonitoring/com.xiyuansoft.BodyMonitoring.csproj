@@ -122,9 +122,21 @@
       <Project>{09A6BA8F-03C1-4093-A7E6-3A3C372B6A6D}</Project>
       <Name>com.xiyuansoft.bormodel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\com.xiyuansoft\bormodel\com.xiyuansoft.DataBaseUpdate\com.xiyuansoft.DataBaseUpdate.csproj">
+      <Project>{f2e16c78-cb0a-409b-ab64-693bd59ea046}</Project>
+      <Name>com.xiyuansoft.DataBaseUpdate</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\com.xiyuansoft\xyConfig\com.xiyuansoft.xyAppConfig\com.xiyuansoft.xyAppConfig.csproj">
       <Project>{1E570E74-75C1-49AE-82B3-3536EFA94E2D}</Project>
       <Name>com.xiyuansoft.xyAppConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\com.xiyuansoft\xyDb\com.xiyuansoft.DataBasePro.SQLite64\com.xiyuansoft.DataBasePro.SQLite64.csproj">
+      <Project>{bcb8ffbc-0c97-48cc-abca-08b488a69f07}</Project>
+      <Name>com.xiyuansoft.DataBasePro.SQLite64</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\com.xiyuansoft\xyDb\com.xiyuansoft.DataBasePro\com.xiyuansoft.DataBasePro.csproj">
+      <Project>{cf557008-f817-4caf-8668-17fd10065724}</Project>
+      <Name>com.xiyuansoft.DataBasePro</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

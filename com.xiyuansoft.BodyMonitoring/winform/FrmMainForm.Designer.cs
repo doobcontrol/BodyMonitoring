@@ -109,21 +109,21 @@
             // PasswordToolStripMenuItem
             // 
             this.PasswordToolStripMenuItem.Name = "PasswordToolStripMenuItem";
-            this.PasswordToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.PasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.PasswordToolStripMenuItem.Text = "修改密码";
-            this.PasswordToolStripMenuItem.Visible = false;
+            this.PasswordToolStripMenuItem.Click += new System.EventHandler(this.PasswordToolStripMenuItem_Click);
             // 
             // UserToolStripMenuItem
             // 
             this.UserToolStripMenuItem.Name = "UserToolStripMenuItem";
-            this.UserToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.UserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.UserToolStripMenuItem.Text = "用户管理";
             this.UserToolStripMenuItem.Visible = false;
             // 
             // ParsetToolStripMenuItem
             // 
             this.ParsetToolStripMenuItem.Name = "ParsetToolStripMenuItem";
-            this.ParsetToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.ParsetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ParsetToolStripMenuItem.Text = "参数设置";
             this.ParsetToolStripMenuItem.Click += new System.EventHandler(this.ParsetToolStripMenuItem_Click);
             // 

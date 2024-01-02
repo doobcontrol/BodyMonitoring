@@ -163,6 +163,11 @@ namespace com.xiyuansoft.BodyMonitoring.bormodel
             return selectByPKey(userID).Rows[0];
         }
 
+        public Dictionary<string, string> LoginDic(string loginName, string loginPass)
+        {
+            return DtRecordToDic(Login(loginName, loginPass));
+        }
+
         #endregion
     }
 }

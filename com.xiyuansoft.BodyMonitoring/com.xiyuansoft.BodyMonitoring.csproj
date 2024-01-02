@@ -67,6 +67,12 @@
     <Compile Include="winform\FrmAreaPliceEdit.Designer.cs">
       <DependentUpon>FrmAreaPliceEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="winform\FrmEditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmEditPassword.Designer.cs">
+      <DependentUpon>FrmEditPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="winform\FrmEquEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="winform\FrmAreaPliceEdit.resx">
       <DependentUpon>FrmAreaPliceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmEditPassword.resx">
+      <DependentUpon>FrmEditPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="winform\FrmEquEdit.resx">
       <DependentUpon>FrmEquEdit.cs</DependentUpon>

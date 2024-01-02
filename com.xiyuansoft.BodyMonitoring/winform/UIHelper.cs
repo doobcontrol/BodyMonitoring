@@ -12,6 +12,7 @@ namespace com.xiyuansoft.BodyMonitoring.winform
 {
     class UIHelper
     {
+        static public Dictionary<string, string> userRecordDic;
         public static void SetDialogForm(Form dForm)
         {
             dForm.FormBorderStyle = FormBorderStyle.FixedDialog;

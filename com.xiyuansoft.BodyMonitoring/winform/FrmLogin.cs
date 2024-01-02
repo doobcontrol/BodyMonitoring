@@ -13,8 +13,6 @@ namespace com.xiyuansoft.BodyMonitoring.winform
 {
     public partial class FrmLogin : Form
     {
-        public static DataRow loginedUserRow;
-
         public FrmLogin()
         {
             InitializeComponent();
@@ -49,9 +47,8 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             try
             {
                 string loginname = (cmbUserName.SelectedValue as DataRow)[User.fLoginName].ToString();
-                loginedUserRow = User.getnSingInstance().Login(loginname, txtLoginPass.Text);
+                UIHelper.userRecordDic = User.getnSingInstance().LoginDic(loginname, txtLoginPass.Text);
 
-                //loginedUserRow = User.getnSingInstance().Login(txtLoginName.Text, txtLoginPass.Text);
                 DialogResult = DialogResult.OK;
             }
             catch (ApplicationException Ae)

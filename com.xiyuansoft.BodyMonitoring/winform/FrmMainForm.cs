@@ -698,5 +698,10 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             Dictionary<string, object> equDic = (sender as CheckBox).Tag as Dictionary<string, object>;
             equDic["work"] = (sender as CheckBox).Checked;
         }
+
+        private void PasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmEditPassword().ShowDialog();
+        }
     }
 }

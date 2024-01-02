@@ -35,6 +35,9 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             defFBS = this.FormBorderStyle;
             Player = new SoundPlayer("alerm.wav");
 
+            StarttoolStripButton1.ToolTipText = "启动监测";
+            StoptoolStripButton2.ToolTipText = "停止监测";
+            StoptoolStripButton2.Visible = false;
         }
 
         private void FrmMainForm_Load(object sender, EventArgs e)
@@ -67,6 +70,9 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             myBMThread.StartMonitor();
 
             timer1.Start();
+
+            StoptoolStripButton2.Visible = true;
+            StarttoolStripButton1.Visible = false;
         }
 
         private void StoptoolStripButton2_Click(object sender, EventArgs e)
@@ -75,7 +81,10 @@ namespace com.xiyuansoft.BodyMonitoring.winform
 
             myBMThread.EndtMonitor();
             myBMThread.equDic = null;
-            Player.Stop(); ;
+            Player.Stop();
+
+            StoptoolStripButton2.Visible = false;
+            StarttoolStripButton1.Visible = true;
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -205,7 +214,7 @@ namespace com.xiyuansoft.BodyMonitoring.winform
             chkWork.ForeColor = breathBeatColor;
             chkWork.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             chkWork.Text = "监测";
-            chkWork.Tag = retDic;
+            chkWork.Tag = retDic; 
             //mTs.Items.Add(chkWork);
 
             Label lblEquID = new Label();

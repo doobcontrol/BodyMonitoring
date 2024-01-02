@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<xyApp>
+  <dbConnection connectionString="" accessClass="com.xiyuansoft.DataBasePro.SQLite64.SQLiteDbAccess,com.xiyuansoft.DataBasePro.SQLite64" />
+  <systemStatus inited="false" appName="" outDataSourceStr="Data Source=./ederpdb;Version=3;" 
+                httpServerip=""
+                httpServerport="8080"
+                pflowwatchip=""
+                pflowwatchport="7200"
+  />
+  <!--业务数据操作对象配置,用于系统初始化时生成数据库-->
+  <bizObjs initdata="true">
+    
+    <bizObj className="com.xiyuansoft.bormodel.metadata.Table,com.xiyuansoft.bormodel" />
+    <bizObj className="com.xiyuansoft.bormodel.metadata.Field,com.xiyuansoft.bormodel" />
+    <bizObj className="com.xiyuansoft.bormodel.commdata.CommListType,com.xiyuansoft.bormodel" />
+    <bizObj className="com.xiyuansoft.bormodel.commdata.CommList,com.xiyuansoft.bormodel" />
+    <bizObj className="com.xiyuansoft.bormodel.TreeQueryHelper,com.xiyuansoft.bormodel" />
+    <bizObj className="com.xiyuansoft.bormodel.BizPars,com.xiyuansoft.bormodel" idatacreater="com.xiyuansoft.BodyMonitoring.bormodel.SysBizPars,com.xiyuansoft.BodyMonitoring" />
+
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.User,com.xiyuansoft.BodyMonitoring" />
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.Equ,com.xiyuansoft.BodyMonitoring" />
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.Area,com.xiyuansoft.BodyMonitoring" />
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.Police,com.xiyuansoft.BodyMonitoring" />
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.Personnel,com.xiyuansoft.BodyMonitoring" />
+    <bizObj className="com.xiyuansoft.BodyMonitoring.bormodel.MonitorRecord,com.xiyuansoft.BodyMonitoring" />
+    
+  </bizObjs>
+</xyApp>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7CD8E37-5004-4ABC-A971-7478C8EFA8C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.xiyuansoft.BodyMonitoring</RootNamespace>
+    <AssemblyName>com.xiyuansoft.BodyMonitoring</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bormodel\Area.cs" />
+    <Compile Include="bormodel\Equ.cs" />
+    <Compile Include="bormodel\MonitorRecord.cs" />
+    <Compile Include="bormodel\Personnel.cs" />
+    <Compile Include="bormodel\Police.cs" />
+    <Compile Include="bormodel\SysBizPars.cs" />
+    <Compile Include="bormodel\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="start\AppStart.cs" />
+    <Compile Include="winform\BMSimulateThread.cs" />
+    <Compile Include="winform\BMThread.cs" />
+    <Compile Include="winform\FrmAreaPliceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmAreaPliceEdit.Designer.cs">
+      <DependentUpon>FrmAreaPliceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmEquEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmEquEdit.Designer.cs">
+      <DependentUpon>FrmEquEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmEquSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmEquSet.Designer.cs">
+      <DependentUpon>FrmEquSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmMainForm.Designer.cs">
+      <DependentUpon>FrmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmParset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmParset.Designer.cs">
+      <DependentUpon>FrmParset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmPersonnel.Designer.cs">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmPersonnelEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmPersonnelEdit.Designer.cs">
+      <DependentUpon>FrmPersonnelEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\FrmQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winform\FrmQuery.Designer.cs">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winform\UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\com.xiyuansoft\xyConfig\com.xiyuansoft.xyAppConfig\com.xiyuansoft.xyAppConfig.csproj">
+      <Project>{1E570E74-75C1-49AE-82B3-3536EFA94E2D}</Project>
+      <Name>com.xiyuansoft.xyAppConfig</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmAreaPliceEdit.resx">
+      <DependentUpon>FrmAreaPliceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmEquEdit.resx">
+      <DependentUpon>FrmEquEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmEquSet.resx">
+      <DependentUpon>FrmEquSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmMainForm.resx">
+      <DependentUpon>FrmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmParset.resx">
+      <DependentUpon>FrmParset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmPersonnel.resx">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmPersonnelEdit.resx">
+      <DependentUpon>FrmPersonnelEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\FrmQuery.resx">
+      <DependentUpon>FrmQuery.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Industry-Infrared-Beam-Sensor.ico" />
+    <None Include="Resources\image-zoom-in.png" />
+    <None Include="Resources\image-zoom-out.png" />
+    <None Include="Resources\meeting-observer.png" />
+    <None Include="Resources\EditInformationHS.png" />
+    <None Include="Resources\File-New-icon.png" />
+    <None Include="Resources\delete-icon.png" />
+    <None Include="Resources\defaultphoto.jpg" />
+    <None Include="Resources\defaultphoto.png" />
+    <None Include="Resources\alert.gif" />
+    <Content Include="Resources\PlayHS.png" />
+    <Content Include="Resources\StopHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
